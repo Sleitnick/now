@@ -84,7 +84,7 @@ function setTimeAndDate() {
 
 
 // Invoked when user clicks on the time element:
-function timeElementClicked(e) {
+function timeElementClicked() {
 	let millis = Date.now();
 	if ((millis - lastTextClick) < DEBOUNCE_TEXT_CLICK) return;
 	lastTextClick = millis;

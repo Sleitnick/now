@@ -1,0 +1,8 @@
+{
+	"name": "now-chrome-extension",
+	"private": true,
+	"author": "Stephen Leitnick <sleitnick@gmail.com>",
+	"devDependencies": {
+		"eslint": "^5.15.3"
+	}
+}
