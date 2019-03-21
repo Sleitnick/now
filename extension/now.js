@@ -13,9 +13,6 @@ const TIME_FORMAT_KEY = "use_military";
 // Debounce milliseconds for clicking on time text:
 const DEBOUNCE_TEXT_CLICK = 100;
 
-
-
-
 const USE_STORAGE = ("storage" in chrome);
 
 const DAYS_OF_WEEK = [
@@ -29,14 +26,12 @@ const MONTHS = [
 	"November", "December"
 ];
 
-let lastTextClick = 0;
-
-let timeElement = document.getElementById("time");
-let dateElement = document.getElementById("date");
-let yearElement = document.getElementById("year");
+const timeElement = document.getElementById("time");
+const dateElement = document.getElementById("date");
+const yearElement = document.getElementById("year");
 
 let useMilitary = false;
-
+let lastTextClick = 0;
 let lastMinute = -1;
 
 
@@ -48,20 +43,20 @@ function pad(num, size) {
 // Set the time and date elements:
 function setTimeAndDate() {
 
-	let now = new Date();
-	let minute = now.getMinutes();
+	const now = new Date();
+	const minute = now.getMinutes();
 
 	// If the minute hasn't changed, then we have no reason to refresh the display.
 	if (lastMinute === minute) return;
 
-	let hour    = now.getHours();
-	let weekDay = DAYS_OF_WEEK[now.getDay()];
-	let month   = MONTHS[now.getMonth()];
-	let day     = now.getDate();
-	let year    = now.getFullYear();
+	let hour      = now.getHours();
+	const weekDay = DAYS_OF_WEEK[now.getDay()];
+	const month   = MONTHS[now.getMonth()];
+	const day     = now.getDate();
+	const year    = now.getFullYear();
 
-	let suffix  = "";
-	let prefix  = "";
+	let suffix    = "";
+	let prefix    = "";
 
 	// Formatting based on 24-hour or 12-hour:
 	if (useMilitary) {
