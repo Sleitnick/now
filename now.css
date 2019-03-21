@@ -1,0 +1,83 @@
+@font-face {
+	/*
+	"Quicksand" font copyright
+	--------------------------------------
+
+	Copyright (c) 2011, Andrew Paglinawan (www.andrewpaglinawan.com andrew.paglinawan@gmail.com), with Reserved Font Name "Quicksand".
+
+	This Font Software is licensed under the SIL Open Font License, Version 1.1.
+	This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
+	*/
+	font-family: quicksand;
+	src: url(fonts/quicksand/Quicksand-Light.otf);
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+body {
+	font-family: quicksand, "Lucida Console", Monaco, monospace;
+	font-size: 32px;
+	padding: 0;
+	background-color: rgb(40, 50, 90);
+}
+
+.no-select {
+	user-select: none;
+	cursor: default;
+}
+
+.text-light {
+	color: rgb(190, 190, 220);
+}
+
+.text-dark {
+	color: rgb(80, 90, 120);
+}
+
+.centered {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#time {
+	font-size: 3em;
+	display: inline;
+	animation: fadeIn 1s;
+}
+
+#time-h1 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#time #ampm {
+	font-size: 0.25em;
+}
+
+#date {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	font-size: 1em;
+	animation: fadeIn 2s;
+}
+
+#year {
+	margin-top: 0.5em;
+	margin-bottom: 0;
+	font-size: 1em;
+	animation: fadeIn 3s;
+}
+
+@media(max-width: 700px) {
+	#time {
+		font-size: 1.5em;
+	}
+	#date {
+		font-size: 0.5em;
+	}
+}
