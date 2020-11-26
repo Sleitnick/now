@@ -17,11 +17,27 @@
 	to {opacity: 1;}
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-color: rgb(40, 50, 90);
+		--text-color-darker: rgb(80, 90, 120);
+		--text-color-lighter: rgb(190, 190, 220);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-color: rgb(238, 240, 247);
+		--text-color-darker: rgb(137, 148, 194);
+		--text-color-lighter: rgb(137, 148, 194);
+	}
+}
+
 body {
 	font-family: quicksand, "Lucida Console", Monaco, monospace;
-	font-size: 32px;
+	font-size: 48px;
 	padding: 0;
-	background-color: rgb(40, 50, 90);
+	background-color: var(--bg-color);
 }
 
 .no-select {
@@ -30,11 +46,11 @@ body {
 }
 
 .text-light {
-	color: rgb(190, 190, 220);
+	color: var(--text-color-lighter);
 }
 
 .text-dark {
-	color: rgb(80, 90, 120);
+	color: var(--text-color-darker);
 }
 
 .centered {
@@ -47,6 +63,7 @@ body {
 	font-size: 3em;
 	display: inline;
 	animation: fadeIn 1s;
+	cursor: pointer;
 }
 
 #time-h1 {
@@ -73,11 +90,20 @@ body {
 	animation: fadeIn 3s;
 }
 
-@media(max-width: 700px) {
+@media(max-width: 950px) {
 	#time {
 		font-size: 1.5em;
 	}
-	#date {
+	#date, #year {
 		font-size: 0.5em;
+	}
+}
+
+@media(max-width: 500px) {
+	#time {
+		font-size: 0.75em;
+	}
+	#date, #year {
+		font-size: 0.25em;
 	}
 }
