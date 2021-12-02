@@ -4,6 +4,6 @@
 	"author": "Stephen Leitnick <sleitnick@gmail.com>",
 	"scripts": {},
 	"devDependencies": {
-		"eslint": "^7.14.0"
+		"eslint": "^8.3.0"
 	}
 }
